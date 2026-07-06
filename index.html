@@ -3,314 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Besiktning Pro – Hemvägen 1</title>
+<title>Besiktning Pro 3.0</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#123f38">
+<meta name="theme-color" content="#0f3d36">
 <style>
-:root{
-  --green:#123f38; --green2:#1f5b50; --bg:#f3f6f5; --card:#fff; --line:#d9e2df;
-  --danger:#9f2f2f; --soft:#edf4f2; --text:#17201e;
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-header{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;padding:16px 14px 18px;position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,.18)}
-header h1{margin:0;font-size:20px}
-header p{margin:5px 0 0;font-size:12px;opacity:.92}
-.top-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-button{cursor:pointer}
-.btn{border:0;border-radius:12px;padding:11px 13px;font-weight:700}
-.btn.primary{background:#fff;color:var(--green)}
-.btn.green{background:var(--green);color:#fff}
-.btn.soft{background:var(--soft);color:var(--green)}
-.btn.danger{background:var(--danger);color:#fff}
-.progress-wrap{background:#dbe7e4;height:9px;border-radius:99px;overflow:hidden;margin-top:10px}
-.progress{height:9px;background:#7bd0bf;width:0%}
-nav{display:flex;gap:8px;overflow-x:auto;padding:10px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:123px;z-index:19}
-nav button{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:22px;padding:9px 13px;font-weight:700}
-nav button.active{background:var(--green);border-color:var(--green);color:#fff}
-main{max-width:980px;margin:auto;padding:14px 12px 95px}
-section{display:none}
-section.active{display:block}
-.card{background:var(--card);border-radius:18px;padding:16px;margin:0 0 14px;box-shadow:0 1px 8px rgba(0,0,0,.08);border:1px solid #edf0ef}
-h2{margin:0 0 12px;color:var(--green);font-size:25px}
-h3{margin:14px 0 8px;color:var(--green2);font-size:18px}
-label{display:block;font-weight:700;margin:12px 0 5px}
-input,textarea,select{width:100%;border:1px solid #cbd6d3;border-radius:12px;padding:11px;font-size:16px;background:#fff}
-textarea{min-height:86px;resize:vertical}
-.grid{display:grid;grid-template-columns:1fr;gap:10px}
-@media(min-width:760px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:repeat(3,1fr)}}
-.check{display:flex;align-items:center;gap:10px;background:#f8faf9;border:1px solid #e2e9e6;border-radius:13px;padding:10px;margin:8px 0}
-.check input{width:auto;transform:scale(1.25)}
-.item-card{border:1px solid var(--line);background:#fbfdfc;border-radius:15px;padding:12px;margin:10px 0}
-.photo-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.thumb{width:88px;height:88px;border-radius:10px;object-fit:cover;border:1px solid #cbd6d3}
-.photo-note{font-size:12px;color:#52615d;margin-top:4px}
-.fixedbar{position:fixed;bottom:0;left:0;right:0;background:rgba(243,246,245,.96);border-top:1px solid var(--line);padding:10px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;z-index:30}
-.table{width:100%;border-collapse:collapse;margin:8px 0}
-.table th,.table td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
-.table th{background:var(--soft)}
-.badge{display:inline-block;border-radius:999px;background:var(--soft);padding:5px 9px;font-size:12px;color:var(--green);font-weight:700}
-.small{font-size:12px;color:#53615d}
-hr{border:0;border-top:1px solid var(--line);margin:14px 0}
-.print-title{display:none}
-@media print{
-  header,nav,.fixedbar,.no-print{display:none!important}
-  body{background:#fff}
-  main{padding:0;max-width:none}
-  section{display:block!important;page-break-inside:avoid}
-  .card{box-shadow:none;border:1px solid #999;border-radius:0;page-break-inside:avoid}
-  .print-title{display:block;text-align:center;margin:0 0 15px}
-  input,textarea,select{border:0;padding:0}
-  .thumb{width:120px;height:120px}
-}
+:root{--g:#0f3d36;--g2:#1e6256;--bg:#f3f7f6;--line:#d9e5e2;--red:#9b2d2d;--soft:#eaf3f1}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#15211f}
+header{background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;padding:16px;position:sticky;top:0;z-index:10}
+h1{margin:0;font-size:22px}header p{margin:5px 0 10px;font-size:13px}
+button{border:0;border-radius:13px;padding:11px 14px;font-weight:700} .white{background:#fff;color:var(--g)} .green{background:var(--g);color:#fff}.red{background:var(--red);color:#fff}.soft{background:var(--soft);color:var(--g)}
+nav{display:flex;overflow-x:auto;gap:8px;padding:10px;background:#fff;position:sticky;top:113px;z-index:9;border-bottom:1px solid var(--line)}
+nav button{white-space:nowrap;border:1px solid var(--line);background:#fff;color:#111}nav button.active{background:var(--g);color:#fff}
+main{padding:14px 12px 90px;max-width:1000px;margin:auto}.card{background:#fff;border-radius:18px;padding:16px;margin-bottom:14px;box-shadow:0 1px 8px #0001;border:1px solid #eef2f1}
+h2{margin:0 0 12px;color:var(--g);font-size:26px}h3{color:var(--g2)}
+label{display:block;font-weight:700;margin:11px 0 5px}input,textarea,select{width:100%;padding:11px;border:1px solid #cbd8d5;border-radius:12px;font-size:16px;background:#fff}textarea{min-height:85px}
+.grid{display:grid;grid-template-columns:1fr;gap:10px}@media(min-width:800px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:repeat(3,1fr)}}
+.section{display:none}.section.active{display:block}.item{border:1px solid var(--line);border-radius:15px;padding:12px;margin:10px 0;background:#fbfdfc}
+.check{display:flex;gap:9px;align-items:center;background:#f8fbfa;padding:9px;border-radius:12px;border:1px solid #e0ebe8;margin:7px 0}.check input{width:auto;transform:scale(1.25)}
+.bar{position:fixed;bottom:0;left:0;right:0;background:#ffffffee;padding:10px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:center;z-index:20;flex-wrap:wrap}
+.thumb{width:90px;height:90px;object-fit:cover;border-radius:10px;border:1px solid #ccd8d5;margin:4px}.badge{display:inline-block;background:var(--soft);color:var(--g);padding:5px 10px;border-radius:99px;font-weight:700;font-size:12px;margin:3px}
+canvas{border:1px solid #cbd8d5;border-radius:12px;width:100%;height:180px;background:white;touch-action:none}
+.total{font-size:22px;font-weight:800;color:var(--g);padding:12px;background:var(--soft);border-radius:12px}
+.progress{height:9px;background:#d7e7e3;border-radius:99px;overflow:hidden}.progress div{height:9px;background:#79d2c1;width:0%}
+@media print{header,nav,.bar,.noPrint{display:none!important}body{background:#fff}main{padding:0}.section{display:block!important}.card{box-shadow:none;border:1px solid #999;border-radius:0;page-break-inside:avoid}.thumb{width:120px;height:120px}input,textarea,select{border:0;padding:0}}
 </style>
 </head>
 <body>
 <header>
-  <h1>Besiktning Pro – Hemvägen 1</h1>
-  <p>Professionellt övertagande- och besiktningsprotokoll vid avhysning</p>
-  <div class="top-actions no-print">
-    <button class="btn primary" onclick="printReport()">📄 PDF / Skriv ut</button>
-    <button class="btn primary" onclick="exportBackup()">💾 Backup</button>
-    <button class="btn primary" onclick="document.getElementById('backupFile').click()">📥 Import</button>
-    <input id="backupFile" type="file" accept="application/json" style="display:none" onchange="importBackup(event)">
-  </div>
-  <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+<h1>Besiktning Pro 3.0</h1>
+<p>Professionellt protokoll för avhysning, övertagande och ersättningskrav</p>
+<div class="noPrint">
+<button class="white" onclick="window.print()">📄 PDF</button>
+<button class="white" onclick="backup()">💾 Backup</button>
+<button class="white" onclick="document.getElementById('imp').click()">📥 Import</button>
+<input id="imp" type="file" accept="application/json" style="display:none" onchange="importBackup(event)">
+</div>
+<div class="progress"><div id="prog"></div></div>
 </header>
 <nav id="tabs"></nav>
 <main id="app"></main>
-<div class="fixedbar no-print">
-  <button class="btn soft" onclick="prevTab()">← Föregående</button>
-  <button class="btn green" onclick="nextTab()">Nästa →</button>
-  <button class="btn danger" onclick="clearAll()">Rensa</button>
-</div>
-
+<div class="bar noPrint"><button class="soft" onclick="move(-1)">← Föregående</button><button class="green" onclick="move(1)">Nästa →</button><button class="red" onclick="resetAll()">Rensa</button></div>
 <script>
-const tabs = [
- "Översikt","Fastighet","Parter","Nycklar","Mätare",
- "Hall","Gästtoalett","Kök","Vardagsrum","Master Bedroom","Sovrum 2","Sovrum 3","Sovrum 4","Gästrum",
- "Huvudbadrum","Tvättstuga","Garage","Förråd","Trädgård","Husets utsida",
- "Skador","Kvarlämnad egendom","Fotodokumentation","Sammanfattning","Underskrifter"
-];
-const rooms = ["Hall","Gästtoalett","Kök","Vardagsrum","Master Bedroom","Sovrum 2","Sovrum 3","Sovrum 4","Gästrum","Huvudbadrum","Tvättstuga","Garage","Förråd","Trädgård","Husets utsida"];
-const checks = ["Väggar","Golv","Tak","Fönster","Dörrar","Lister","Eluttag/Belysning","Ventilation","Mögel","Fukt","Hål","Sprickor/Kross","Lukt","Städning","Övrigt"];
-const kitchen = ["Kylskåp","Diskmaskin","Spis","Ugn","Köksfläkt"];
-const laundry = ["Tvättmaskin"];
-const keys = ["Huvudnyckel","Reservnyckel","Garage","Förråd","Postlåda","Tagg/Fjärrkontroll","Övrigt"];
-
-let state = JSON.parse(localStorage.getItem("besiktning_pro_v2") || "{}");
-let active = Number(localStorage.getItem("besiktning_active") || "0");
-
-function save(){ localStorage.setItem("besiktning_pro_v2", JSON.stringify(state)); updateProgress(); }
-function key(s){ return s.replaceAll(" ","_").replaceAll("/","_").replaceAll("ä","a").replaceAll("å","a").replaceAll("ö","o").replaceAll("Ä","A").replaceAll("Ö","O").replaceAll("Å","A"); }
-function val(id, def=""){ return state[id] ?? def; }
-function setv(id,v){ state[id]=v; save(); }
-function esc(s){ return String(s ?? "").replace(/[&<>"']/g, m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m])); }
-
-function input(id,label,type="text",ph=""){
- return `<label>${label}</label><input type="${type}" value="${esc(val(id,ph))}" oninput="setv('${id}',this.value)">`;
+const T=["Start","Fastighet","Parter","Nycklar","Mätare","Rum","Vitvaror","Skador","Egendom","Foto/Video","Ersättning","Signaturer","Slutrapport"];
+const rooms=["Hall","Gästtoalett","Kök","Vardagsrum","Master Bedroom","Sovrum 2","Sovrum 3","Sovrum 4","Gästrum","Huvudbadrum","Tvättstuga","Garage","Förråd","Trädgård","Husets utsida"];
+const checks=["Väggar","Golv","Tak","Fönster","Dörrar","Lister","El/Belysning","Ventilation","Fukt","Mögel","Hål","Sprickor","Städning","Lukt","Övrigt"];
+const apps=["Kylskåp","Diskmaskin","Spis","Ugn","Köksfläkt","Tvättmaskin"];
+let S=JSON.parse(localStorage.getItem("bp3")||"{}"), A=Number(localStorage.getItem("bp3tab")||0);
+function save(){localStorage.setItem("bp3",JSON.stringify(S));progress()}
+function v(k,d=""){return S[k]??d} function setv(k,x){S[k]=x;save()} function k(s){return s.replaceAll(" ","_").replaceAll("/","_").replaceAll("ä","a").replaceAll("ö","o").replaceAll("å","a")}
+function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function inp(id,l,t="text",d=""){return `<label>${l}</label><input type="${t}" value="${esc(v(id,d))}" oninput="setv('${id}',this.value)">`}
+function area(id,l){return `<label>${l}</label><textarea oninput="setv('${id}',this.value)">${esc(v(id))}</textarea>`}
+function sel(id,l,opts){return `<label>${l}</label><select onchange="setv('${id}',this.value)">${opts.map(o=>`<option ${v(id)==o?"selected":""}>${o}</option>`).join("")}</select>`}
+function ch(id,l){return `<div class="check"><input type="checkbox" ${v(id,false)?"checked":""} onchange="setv('${id}',this.checked)"><b>${l}</b></div>`}
+function photo(id){let a=v("ph_"+id,[]);return `<label class="noPrint">Foto/video</label><input class="noPrint" type="file" accept="image/*,video/*" capture="environment" multiple onchange="files('${id}',this.files)"><div>${a.map((f,i)=>f.type.startsWith("image/")?`<img class="thumb" src="${f.data}" title="Foto ${i+1}">`:`<span class="badge">🎥 ${esc(f.name)}</span>`).join("")}</div>`}
+function files(id,fs){let a=v("ph_"+id,[]);[...fs].forEach(file=>{let r=new FileReader();r.onload=e=>{a.push({name:file.name,type:file.type,data:e.target.result,time:new Date().toLocaleString("sv-SE")});setv("ph_"+id,a);build()};r.readAsDataURL(file)})}
+function tabContent(t){
+if(t=="Start")return card("Start",`<p><span class="badge">Avhysning</span><span class="badge">Kronofogden</span><span class="badge">Skadeståndsunderlag</span></p>${inp("case","Ärendenummer / målnummer")}${inp("start","Starttid")}${inp("end","Sluttid")}${area("note","Allmän notering")}`);
+if(t=="Fastighet")return card("Fastighet",`<div class="grid two">${inp("addr","Adress","text","Hemvägen 1, 463 72 Lödöse")}${inp("prop","Fastighetsbeteckning","text","Lilla Edet Tingberg 3:70")}${inp("owner","Fastighetsägare")}${inp("phone","Telefon")}${inp("date","Datum","date")}${inp("time","Tid","time")}</div>${photo("fastighet")}`);
+if(t=="Parter")return card("Parter",`<div class="grid two">${inp("t1","Hyresgäst 1","text","Vilda Olofsson")}${inp("t2","Hyresgäst 2","text","Jesper Bengtsson")}${inp("kfm","Kronofogden")}${inp("w1","Vittne 1")}${inp("w2","Vittne 2")}</div>`);
+if(t=="Nycklar")return card("Nycklar",["Huvudnyckel","Reservnyckel","Garage","Förråd","Postlåda","Tagg/Fjärrkontroll"].map(x=>`<div class="item"><h3>${x}</h3><div class="grid three">${inp("key_"+k(x)+"_in","Mottagna","number")}${inp("key_"+k(x)+"_miss","Saknas","number")}${inp("key_"+k(x)+"_n","Kommentar")}</div></div>`).join("")+photo("nycklar"));
+if(t=="Mätare")return card("Mätare",`<div class="grid two">${inp("el","Elmätare")}${inp("water","Vattenmätare")}${inp("md","Datum","date")}${inp("mt","Tid","time")}</div>${photo("matare")}`);
+if(t=="Rum")return rooms.map(r=>card(r,checks.map(c=>`<div class="item">${ch(k(r)+"_"+k(c)+"_ok",c)}${sel(k(r)+"_"+k(c)+"_s","Status",["Ej kontrollerad","OK","Anmärkning","Skada","Saknas"])}${area(k(r)+"_"+k(c)+"_n","Kommentar / Foto nr")}</div>`).join("")+photo(k(r)))).join("");
+if(t=="Vitvaror")return card("Vitvaror",apps.map(a=>`<div class="item"><h3>${a}</h3><div class="grid two">${inp("app_"+k(a)+"_brand","Fabrikat")}${inp("app_"+k(a)+"_model","Modell/Serienummer")}${sel("app_"+k(a)+"_func","Funktion",["Ej kontrollerad","Fungerar","Fungerar ej","Skadad","Saknas"])}${inp("app_"+k(a)+"_damage","Skada")}</div>${area("app_"+k(a)+"_n","Kommentar")}${photo("app_"+k(a))}</div>`).join(""));
+if(t=="Skador")return card("Skador",Array.from({length:25},(_,i)=>i+1).map(n=>`<div class="item"><h3>Skada ${n}</h3><div class="grid two">${inp("d"+n+"_room","Rum/plats")}${inp("d"+n+"_photo","Foto nr")}${sel("d"+n+"_type","Typ",["Ej valt","Fukt","Mögel","Hål","Spricka","Kross","Smuts","Saknas","Övrigt"])}${sel("d"+n+"_wear","Bedömning",["Ej bedömt","Normalt slitage","Onormalt slitage","Kräver utredning"])}${inp("d"+n+"_cost","Kostnad SEK","number")}${inp("d"+n+"_action","Åtgärd")}</div>${area("d"+n+"_desc","Beskrivning")}${photo("d"+n)}</div>`).join(""));
+if(t=="Egendom")return card("Kvarlämnad egendom",Array.from({length:15},(_,i)=>i+1).map(n=>`<div class="item"><h3>Föremål ${n}</h3>${inp("e"+n+"_place","Plats")}${inp("e"+n+"_action","Åtgärd")}${area("e"+n+"_desc","Beskrivning")}${photo("e"+n)}</div>`).join(""));
+if(t=="Foto/Video")return card("Fotodokumentation",`<div class="grid two">${inp("pc","Antal fotografier","number")}${inp("vc","Antal videofilmer","number")}${inp("storage","Lagringsplats")}${inp("backup","Backup")}</div>${area("phnote","Noteringar")}`);
+if(t=="Ersättning")return card("Ersättning",`<div class="total">Totalt ersättningsunderlag: <span id="sum">${sum()}</span> SEK</div>${area("claim","Sammanfattning av ersättningskrav")}`);
+if(t=="Signaturer")return card("Signaturer",["Fastighetsägare","Hyresgäst 1","Hyresgäst 2","Kronofogden","Vittne 1","Vittne 2"].map(x=>sig(x)).join(""));
+if(t=="Slutrapport")return card("Slutrapport",`${area("summary","Slutsammanfattning")}${area("attachments","Bilagor / filer / foton / videos")}`);
 }
-function area(id,label){
- return `<label>${label}</label><textarea oninput="setv('${id}',this.value)">${esc(val(id))}</textarea>`;
-}
-function select(id,label,opts){
- return `<label>${label}</label><select onchange="setv('${id}',this.value)">${opts.map(o=>`<option ${val(id)==o?'selected':''}>${o}</option>`).join("")}</select>`;
-}
-function chk(id,label){
- return `<div class="check"><input type="checkbox" ${val(id,false)?'checked':''} onchange="setv('${id}',this.checked)"><b>${label}</b></div>`;
-}
-function photos(id){
- const arr = val("photos_"+id,[]);
- return `<label class="no-print">Foto / video</label>
- <input class="no-print" type="file" accept="image/*,video/*" capture="environment" multiple onchange="handleFiles('${id}',this.files)">
- <div class="photo-note">Foto sparas lokalt i denna telefon. Ange gärna foto-nr i kommentaren.</div>
- <div class="photo-row" id="ph_${id}">${arr.map(f=>f.type && f.type.startsWith("image/")?`<img class="thumb" src="${f.data}" title="${esc(f.name)}">`:`<div class="badge">🎥 ${esc(f.name)}</div>`).join("")}</div>`;
-}
-function handleFiles(id,files){
- const arr = val("photos_"+id,[]);
- [...files].forEach(file=>{
-   const reader=new FileReader();
-   reader.onload=e=>{
-     arr.push({name:file.name,type:file.type,data:e.target.result,time:new Date().toLocaleString("sv-SE")});
-     setv("photos_"+id,arr);
-     document.getElementById("ph_"+id).innerHTML=arr.map(f=>f.type && f.type.startsWith("image/")?`<img class="thumb" src="${f.data}" title="${esc(f.name)}">`:`<div class="badge">🎥 ${esc(f.name)}</div>`).join("");
-   };
-   reader.readAsDataURL(file);
- });
-}
-
-function renderOverview(){
- return `<div class="card"><h2>Översikt</h2>
- <p><span class="badge">Hemvägen 1</span> <span class="badge">Kronofogden</span> <span class="badge">Avhysning / övertagande</span></p>
- <p>Fyll i protokollet steg för steg. Allt sparas automatiskt på telefonen.</p>
- <div class="grid two">
- ${input("case_no","Ärendenummer / målnummer")}
- ${input("inspection_start","Starttid")}
- ${input("inspection_end","Sluttid")}
- ${input("weather","Väder / yttre förhållanden")}
- </div>
- ${area("general_notes","Allmänna noteringar")}
- </div>`;
-}
-function renderFastighet(){
- return `<div class="card"><h2>Fastighetsuppgifter</h2><div class="grid two">
- ${input("address","Adress","text","Hemvägen 1, 463 72 Lödöse")}
- ${input("property","Fastighetsbeteckning","text","Lilla Edet Tingberg 3:70")}
- ${input("owner","Fastighetsägare")}
- ${input("owner_phone","Telefon")}
- ${input("date","Datum","date")}
- ${input("time","Tid","time")}
- </div>${photos("fastighet")}</div>`;
-}
-function renderParter(){
- return `<div class="card"><h2>Parter och närvarande</h2>
- <div class="grid two">
- ${input("tenant1","Hyresgäst 1","text","Vilda Olofsson")}
- ${input("tenant2","Hyresgäst 2","text","Jesper Bengtsson")}
- ${input("kfm","Kronofogdens förrättningsman")}
- ${input("kfm_id","Tjänste-ID / anteckning")}
- ${input("w1","Vittne 1")}
- ${input("w2","Vittne 2")}
- </div></div>`;
-}
-function renderKeys(){
- return `<div class="card"><h2>Nyckelöverlämning</h2>
- <table class="table"><tr><th>Nyckeltyp</th><th>Mottagna</th><th>Saknas</th><th>Kommentar</th></tr>
- ${keys.map(k=>{const id=key("nyckel_"+k);return `<tr><td><b>${k}</b></td><td><input type="number" value="${esc(val(id+'_in'))}" oninput="setv('${id}_in',this.value)"></td><td><input type="number" value="${esc(val(id+'_miss'))}" oninput="setv('${id}_miss',this.value)"></td><td><input value="${esc(val(id+'_note'))}" oninput="setv('${id}_note',this.value)"></td></tr>`}).join("")}
- </table>${photos("nycklar")}</div>`;
-}
-function renderMeters(){
- return `<div class="card"><h2>Mätarställningar</h2><div class="grid two">
- ${input("electricity","Elmätare")}
- ${input("water","Vattenmätare")}
- ${input("meter_date","Avläst datum","date")}
- ${input("meter_time","Avläst tid","time")}
- </div>${photos("matare")}</div>`;
-}
-function renderRoom(room){
- const rid=key(room);
- let extra="";
- if(room==="Kök") extra=renderAppliances("kok",kitchen);
- if(room==="Tvättstuga") extra=renderAppliances("tvatt",laundry);
- return `<div class="card"><h2>${room}</h2>
- <div class="grid two">
- ${checks.map(c=>`<div class="item-card">${chk(rid+"_"+key(c)+"_ok",c)}${select(rid+"_"+key(c)+"_status","Status",["Ej kontrollerad","OK","Anmärkning","Skada","Saknas"])}${area(rid+"_"+key(c)+"_note","Kommentar / Foto nr")}</div>`).join("")}
- </div>${photos(rid)}${extra}</div>`;
-}
-function renderAppliances(prefix,list){
- return `<h3>Vitvaror / utrustning</h3>${list.map(a=>{const id=key(prefix+"_"+a); return `<div class="item-card"><h3>${a}</h3><div class="grid two">
- ${input(id+"_brand","Fabrikat")}
- ${input(id+"_model","Modell / Serienummer")}
- ${select(id+"_works","Funktion",["Ej kontrollerad","Fungerar","Fungerar ej","Skadad","Saknas"])}
- ${input(id+"_damage","Synlig skada")}
- </div>${area(id+"_note","Kommentar")}${photos(id)}</div>`}).join("")}`;
-}
-function renderDamages(){
- return `<div class="card"><h2>Skador / Skadeståndsunderlag</h2>
- ${Array.from({length:20},(_,i)=>i+1).map(n=>`<div class="item-card"><h3>Skada ${n}</h3><div class="grid two">
- ${input("damage_"+n+"_room","Rum / plats")}
- ${input("damage_"+n+"_photo","Foto nr / video nr")}
- ${select("damage_"+n+"_type","Typ",["Ej valt","Mögel","Fukt","Hål","Spricka","Kross","Smuts","Saknad utrustning","Övrigt"])}
- ${select("damage_"+n+"_wear","Bedömning",["Ej bedömt","Normalt slitage","Onormalt slitage","Kräver utredning"])}
- ${input("damage_"+n+"_cost","Bedömd kostnad SEK","number")}
- ${input("damage_"+n+"_action","Föreslagen åtgärd")}
- </div>${area("damage_"+n+"_desc","Beskrivning")}${photos("damage_"+n)}</div>`).join("")}
- </div>`;
-}
-function renderLeft(){
- return `<div class="card"><h2>Kvarlämnad egendom</h2>
- ${Array.from({length:12},(_,i)=>i+1).map(n=>`<div class="item-card"><h3>Föremål ${n}</h3><div class="grid two">
- ${input("left_"+n+"_place","Plats")}
- ${input("left_"+n+"_action","Åtgärd")}
- </div>${area("left_"+n+"_desc","Beskrivning")}${photos("left_"+n)}</div>`).join("")}
- </div>`;
-}
-function renderPhotoDoc(){
- return `<div class="card"><h2>Fotodokumentation</h2><div class="grid two">
- ${input("photo_count","Antal fotografier","number")}
- ${input("video_count","Antal videofilmer","number")}
- ${input("storage","Filnamn / lagringsplats")}
- ${input("backup_storage","Backup / USB / moln")}
- </div>${area("photo_notes","Noteringar om bild- och videomaterial")}</div>`;
-}
-function renderSummary(){
- return `<div class="card"><h2>Slutsammanfattning</h2>
- ${area("summary","Sammanfattning")}
- ${area("claim_basis","Underlag för eventuell ersättningskrav")}
- </div>`;
-}
-function renderSignatures(){
- return `<div class="card"><h2>Underskrifter</h2>
- <p class="small">Signering kan göras på utskriven PDF. Namn kan även fyllas i här.</p>
- <div class="grid two">
- ${input("sig_owner","Fastighetsägare")}
- ${input("sig_tenant1","Hyresgäst 1")}
- ${input("sig_tenant2","Hyresgäst 2")}
- ${input("sig_kfm","Kronofogden")}
- ${input("sig_w1","Vittne 1")}
- ${input("sig_w2","Vittne 2")}
- </div></div>`;
-}
-function content(t){
- if(t==="Översikt")return renderOverview();
- if(t==="Fastighet")return renderFastighet();
- if(t==="Parter")return renderParter();
- if(t==="Nycklar")return renderKeys();
- if(t==="Mätare")return renderMeters();
- if(t==="Skador")return renderDamages();
- if(t==="Kvarlämnad egendom")return renderLeft();
- if(t==="Fotodokumentation")return renderPhotoDoc();
- if(t==="Sammanfattning")return renderSummary();
- if(t==="Underskrifter")return renderSignatures();
- return renderRoom(t);
-}
-function build(){
- document.getElementById("tabs").innerHTML=tabs.map((t,i)=>`<button id="tab_${i}" onclick="show(${i})">${t}</button>`).join("");
- document.getElementById("app").innerHTML=`<h1 class="print-title">Besiktningsprotokoll – Hemvägen 1</h1>`+tabs.map((t,i)=>`<section id="sec_${i}">${content(t)}</section>`).join("");
- show(active);
- updateProgress();
-}
-function show(i){
- active=i; localStorage.setItem("besiktning_active",i);
- document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
- document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
- document.getElementById("sec_"+i).classList.add("active");
- document.getElementById("tab_"+i).classList.add("active");
- window.scrollTo({top:0,behavior:"smooth"});
-}
-function nextTab(){ if(active<tabs.length-1) show(active+1); }
-function prevTab(){ if(active>0) show(active-1); }
-function updateProgress(){
- const completed = tabs.filter(t=>{
-   if(t==="Översikt") return val("general_notes") || val("case_no");
-   if(t==="Fastighet") return val("owner") || val("date");
-   if(t==="Parter") return val("tenant1") || val("kfm");
-   if(t==="Nycklar") return keys.some(k=>val(key("nyckel_"+k)+"_in"));
-   if(t==="Mätare") return val("electricity") || val("water");
-   if(t==="Skador") return val("damage_1_desc") || val("damage_1_room");
-   if(t==="Sammanfattning") return val("summary");
-   if(rooms.includes(t)) return checks.some(c=>val(key(t)+"_"+key(c)+"_ok"));
-   return false;
- }).length;
- const pct=Math.round(completed/tabs.length*100);
- const el=document.getElementById("progress"); if(el) el.style.width=pct+"%";
-}
-function printReport(){ window.print(); }
-function exportBackup(){
- const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
- const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="besiktning_hemvagen1_backup_v2.json"; a.click();
-}
-function importBackup(e){
- const file=e.target.files[0]; if(!file)return;
- const r=new FileReader(); r.onload=()=>{try{state=JSON.parse(r.result);save();location.reload()}catch(err){alert("Fel backupfil")}}; r.readAsText(file);
-}
-function clearAll(){
- if(confirm("Vill du verkligen rensa hela protokollet på denna telefon?")){
-   localStorage.removeItem("besiktning_pro_v2"); state={}; location.reload();
- }
-}
+function card(title,body){return `<div class="card"><h2>${title}</h2>${body}</div>`}
+function sum(){let s=0;for(let i=1;i<=25;i++)s+=Number(v("d"+i+"_cost",0)||0);return s}
+function sig(name){let id="sig_"+k(name);return `<div class="item"><h3>${name}</h3>${inp(id+"_name","Namn")}<canvas id="${id}" data-sig="${id}"></canvas><button class="soft noPrint" onclick="clearSig('${id}')">Rensa signatur</button></div>`}
+function setupCanvas(){document.querySelectorAll("canvas[data-sig]").forEach(c=>{let id=c.dataset.sig,ctx=c.getContext("2d"),draw=false;let img=v(id+"_img");if(img){let im=new Image();im.onload=()=>ctx.drawImage(im,0,0,c.width,c.height);im.src=img}function pos(e){let r=c.getBoundingClientRect(),p=e.touches?e.touches[0]:e;return{x:(p.clientX-r.left)*(c.width/r.width),y:(p.clientY-r.top)*(c.height/r.height)}}function start(e){draw=true;ctx.beginPath();let p=pos(e);ctx.moveTo(p.x,p.y);e.preventDefault()}function move(e){if(!draw)return;let p=pos(e);ctx.lineTo(p.x,p.y);ctx.stroke();setv(id+"_img",c.toDataURL());e.preventDefault()}function end(){draw=false;setv(id+"_img",c.toDataURL())}c.width=c.offsetWidth*2;c.height=180*2;ctx.lineWidth=4;ctx.lineCap="round";c.onmousedown=start;c.onmousemove=move;c.onmouseup=end;c.onmouseleave=end;c.ontouchstart=start;c.ontouchmove=move;c.ontouchend=end})}
+function clearSig(id){delete S[id+"_img"];save();build()}
+function build(){document.getElementById("tabs").innerHTML=T.map((t,i)=>`<button class="${i==A?"active":""}" onclick="show(${i})">${t}</button>`).join("");document.getElementById("app").innerHTML=T.map((t,i)=>`<section class="section ${i==A?"active":""}" id="s${i}">${tabContent(t)}</section>`).join("");setupCanvas();progress()}
+function show(i){A=i;localStorage.setItem("bp3tab",A);build();scrollTo(0,0)}function move(d){if(A+d>=0&&A+d<T.length)show(A+d)}
+function progress(){let filled=Object.values(S).filter(x=>x&&x!==false&&!(Array.isArray(x)&&x.length==0)).length;document.getElementById("prog").style.width=Math.min(100,filled/40*100)+"%"}
+function backup(){let b=new Blob([JSON.stringify(S,null,2)],{type:"application/json"});let a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="besiktning_backup_v3.json";a.click()}
+function importBackup(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{S=JSON.parse(r.result);save();build()};r.readAsText(f)}
+function resetAll(){if(confirm("Rensa allt på denna telefon?")){localStorage.removeItem("bp3");S={};build()}}
 build();
-if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}
+if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script>
 </body>
 </html>
